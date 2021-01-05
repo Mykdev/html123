@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>O(n²)</title>
+</head>
+<body>
+    <button onclick="myFunction()" style="margin-top:50px;margin-left:40%;font-size:36px;z-index:-1;">Показать как я люблю тебя</button>
+    <script>
+        function myFunction() {
+            
+            for(let j = 0;j<100;j++){
+                for(let i = 0;i<100;i++){
+                    msg = document.createElement("P")
+                    msg.innerHTML = `Колина клетка ${j} любит <br /> Дианину клетку ${i}`
+                    msg.style.textAlign = "center";
+                    msg.style.backgroundColor = "#ff7f50 ";
+                    msg.style.position = "absolute";
+                    msg.style.left = Math.floor(Math.random() * (screen.width-(screen.width/10)))+'px';
+                    msg.style.top = Math.floor(Math.random() * (screen.height-(screen.height/10)))+'px';
+                    document.body.appendChild(msg);   
+               }  
+            }
+        }
+    </script>
+        
+</body>
+</html>
